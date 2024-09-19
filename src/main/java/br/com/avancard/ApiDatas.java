@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class ApiDatas {
     public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class ApiDatas {
         System.out.println("Hora atual: " + horaAtual);
 
         LocalDateTime dataAtualHoraAtual = LocalDateTime.now();
-        System.out.println("Data e hora atual: " + dataAtualHoraAtual);
+        System.out.println("Data e hora atual: " + dataAtualHoraAtual.format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm:ss"))); //Formatando data e hora de acordo com o padrao brasileiro
+
     }
 }
